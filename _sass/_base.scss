@@ -1,6 +1,6 @@
 /**
  * Reset some basic elements
- *//*
+ */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -8,11 +8,11 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-*/
+
 
 /**
  * Basic styling
- *//*
+ */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
@@ -26,10 +26,10 @@ body {
 }
 
 
-*/
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
- *//*
+ */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -37,7 +37,7 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-*/
+
 
 /**
  * Images
@@ -154,7 +154,7 @@ pre {
 
 /**
  * Wrapper
- */
+ *//*
 .wrapper {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -170,7 +170,7 @@ pre {
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }
-}
+}*/
 
 
 
