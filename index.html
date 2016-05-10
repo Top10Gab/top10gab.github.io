@@ -24,7 +24,50 @@ layout: default
 
 <div class="row" id="content">
     <div class="medium-8 columns">
-        <div class="blog-post">
+        {% for post in paginator.posts %}
+            <div class="blog-post">
+                <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> <small>{{ post.date | date: "%b %-d, %Y" }}</small></h3>
+                <img class="thumbnail" src="http://placehold.it/850x350">
+                <p>{{ post.content | strip_html | truncatewords:51 }}</p>
+                <div class="callout">
+                    <ul class="menu simple">
+                        <li><a href="#">Author: Mike Mikers</a></li>
+                        <li><a href="#">Comments: 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+        
+        <!-- Pagination links -->
+        {% if paginator.total_pages > 1 %}
+            <div class="row column">
+                <ul class="pagination" role="navigation" aria-label="Pagination">
+                    {% if paginator.previous_page %}
+                        <li aria-label="Previous page"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Previous</a></li>
+                    {% else %}
+                        <li class="disabled">Previous</li>
+                    {% endif %}
+
+                    {% for page in (1..paginator.total_pages) %}
+                        {% if page == paginator.page %}
+                            <li class="current"><span class="show-for-sr">You're on page</span>{{ page }}</li>
+                        {% elsif page == 1 %}                            
+                            <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+                        {% else %}
+                            <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" aria-label="Page {{ page }}">{{ page }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if paginator.next_page %}
+                        <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Next page">Next</a></li>
+                    {% else %}
+                        <li class="disabled">Next</li>
+                    {% endif %}
+                </ul>
+            </div>
+        {% endif %}
+        
+        
+        <!-- <div class="blog-post">
             <h3>Awesome blog post title <small>3/6/2015</small></h3>
             <img class="thumbnail" src="http://placehold.it/850x350">
             <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
@@ -45,7 +88,7 @@ layout: default
                     <li><a href="#">Comments: 3</a></li>
                 </ul>
             </div>
-        </div>
+        </div> 
         <div class="blog-post">
             <h3>Awesome blog post title <small>3/6/2015</small></h3>
             <img class="thumbnail" src="http://placehold.it/850x350">
@@ -56,18 +99,7 @@ layout: default
                     <li><a href="#">Comments: 3</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="blog-post">
-            <h3>Awesome blog post title <small>3/6/2015</small></h3>
-            <img class="thumbnail" src="http://placehold.it/850x350">
-            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
-            <div class="callout">
-                <ul class="menu simple">
-                    <li><a href="#">Author: Mike Mikers</a></li>
-                    <li><a href="#">Comments: 3</a></li>
-                </ul>
-            </div>
-        </div>
+        </div>-->
     </div>
     <div class="medium-3 columns" data-sticky-container>
         <div class="sticky" data-sticky data-anchor="content">
@@ -78,13 +110,23 @@ layout: default
                 <li><a href="#">Mike</a></li>
                 <li><a href="#">Holly</a></li>
             </ul>
-            <h4>Authors</h4>
-            <ul>
+            <h4>Share it!</h4>
+            <!--<ul>
                 <li><a href="#">Skyler</a></li>
                 <li><a href="#">Jesse</a></li>
                 <li><a href="#">Mike</a></li>
                 <li><a href="#">Holly</a></li>
-            </ul>
+            </ul>-->
+            <!-- AddToAny BEGIN -->
+            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_twitter"></a>
+                <a class="a2a_button_google_plus"></a>
+                <a class="a2a_button_reddit"></a>
+            </div>
+            <script async src="https://static.addtoany.com/menu/page.js"></script>
+            <!-- AddToAny END -->
         </div>
     </div>
 </div>

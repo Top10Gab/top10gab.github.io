@@ -47,3 +47,18 @@
     text-decoration: none;
     font-family: 'Poiret One', cursive;
 }
+
+.post-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.post-link:active, .post-link:visited {
+    color: #222 !important;
+    text-decoration: none !important;
+}
+
+.post-link:hover {
+    transform: scale(1.5);
+    text-decoration: none;
+}

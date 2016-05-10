@@ -3,13 +3,50 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
+ <!-- <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
-  </div>
-
+  </div> -->
+    <div class="row" id="content">
+        <div class="medium-8 columns">
+            <div class="blog-post">
+                <h1 class="post-title"><span>{{ page.title }}</span></h1> <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+                <img class="thumbnail" src="http://placehold.it/850x350">
+                <p>{{ content }}</p>
+            </div>
+        </div>
+        <div class="medium-3 columns" data-sticky-container>
+            <div class="sticky" data-sticky data-anchor="content">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#">Skyler</a></li>
+                    <li><a href="#">Jesse</a></li>
+                    <li><a href="#">Mike</a></li>
+                    <li><a href="#">Holly</a></li>
+                </ul>
+                <h4>Share it!</h4>
+               <!--  <ul>
+                   <li><a href="#">Skyler</a></li>
+                    <li><a href="#">Jesse</a></li>
+                    <li><a href="#">Mike</a></li>
+                    <li><a href="#">Holly</a></li>
+                </ul> -->
+                <!-- AddToAny BEGIN -->
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                    <a class="a2a_button_facebook"></a>
+                    <a class="a2a_button_twitter"></a>
+                    <a class="a2a_button_google_plus"></a>
+                    <a class="a2a_button_reddit"></a>
+                </div>
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
+                <!-- AddToAny END -->
+                
+            </div>
+        </div>
+    </div>
 </article>
