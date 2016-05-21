@@ -36,13 +36,13 @@
   height: 100%;
   display: block;
 }
-*/
+
 .lazyload {
   background: #f7f7f7;
 }
-
+*/
 .lazyloading {
-  background: #f7f7f7 url(http://afarkas.github.io/lazysizes/assets/imgs/loader.gif) no-repeat center;
+  background: url(http://afarkas.github.io/lazysizes/assets/imgs/loader.gif) no-repeat center;
   min-height: 60px;
 }
 /*end of istope*/
