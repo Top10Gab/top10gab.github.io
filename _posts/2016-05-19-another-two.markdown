@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2016-05-08 15:22:31 -0400
-categories: geek
+title:  "another two"
+date:   2016-05-19 23:55:41
+categories: entertainment
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
 portrait: item-portrait
-summary: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-thumbnail: http://blogs-images.forbes.com/markhughes/files/2015/04/Batman-v-Superman-trailer-2-1940x1308.png
+thumbnail: http://screencrush.com/442/files/2015/07/batman-v-superman-scenes.jpg
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

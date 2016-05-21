@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2016-05-08 15:22:31 -0400
+title:  "another one"
+date:   2016-05-19 23:55:36
 categories: geek
-portrait: item-portrait
-summary: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-thumbnail: http://blogs-images.forbes.com/markhughes/files/2015/04/Batman-v-Superman-trailer-2-1940x1308.png
+summary: http://jekyllrb.com/docs/home [jekyll-gh] https://github.com/jekyll/jekyll [jekyll-talk] https://talk.jekyllrb.com/
+thumbnail: http://screencrush.com/442/files/2015/07/batman-v-superman-scenes.jpg
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
